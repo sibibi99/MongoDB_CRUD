@@ -1,0 +1,25 @@
+<% include header %>
+  <div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="display-3"><%= title %></h1>
+    <p class="lead">Trong Mongod</p>
+    <hr class="my-2">
+  
+  </div>
+    <% datasua.forEach(function(sua) { %>
+  <form action="/sua/<%= sua._id %>" method="post">
+    <div class="form-group">
+      <label for="ten">Tên</label>
+      <input type="text" name="ten" id="ten" class="form-control" placeholder="Nhập tên liên hệ" aria-describedby="helpId" value="<%= sua.ten %>">
+      <small id="helpId" class="text-muted">nhập tên</small>
+    </div> 
+    <div class="form-group">
+      <label for="ten">Số điện thoại </label>
+      <input type="text" name="dt" id="ten" class="form-control" placeholder="Nhập sso đt" aria-describedby="helpId" value= '<%= sua.dienthoai %>'>
+      <small id="helpId" class="text-muted">nhập đt</small>
+    </div> 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+  <%}) %>
+<% include footer %>

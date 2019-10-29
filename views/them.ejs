@@ -1,0 +1,24 @@
+<% include header %>
+  <div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="display-3">Thêm Mới Danh sách</h1>
+    <p class="lead">Vào Mongod</p>
+    <hr class="my-2">
+  
+  </div>
+  <form action="/them" method="post">
+    <div class="form-group">
+      <label for="ten">Tên</label>
+      <input type="text" name="ten" id="ten" class="form-control" placeholder="Nhập tên liên hệ" aria-describedby="helpId">
+      <small id="helpId" class="text-muted">nhập tên</small>
+    </div> 
+    <div class="form-group">
+      <label for="ten">Số điện thoại </label>
+      <input type="text" name="dt" id="ten" class="form-control" placeholder="Nhập sso đt" aria-describedby="helpId">
+      <small id="helpId" class="text-muted">nhập đt</small>
+    </div> 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  </form>
+      
+<% include footer %>
